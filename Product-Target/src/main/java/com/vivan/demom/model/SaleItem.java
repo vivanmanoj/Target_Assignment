@@ -12,11 +12,14 @@ public class SaleItem {
 	private final long product_id;
 	  private String department;
 	  private final int quantity;
-	  private long base_price;
+	 // private long base_price;
+	  private double base_price;
 	  @Setter
-	  private long price_with_quantity_multiplied;
+	  private double price_with_quantity_multiplied;
+	 // private long price_with_quantity_multiplied;
 	  @Setter
-	  private long final_selling_price;
+	  private double final_selling_price;
+	 // private long final_selling_price;
 	  @Setter
 	  private String discountApplied;
 

@@ -17,9 +17,9 @@ public class Discounts {
 	  @Id
 	  @GeneratedValue
 	  private final long discount_id;
-	  private final DiscountType discountType;
-	  private final int discountValue;
-	  private final String discountReason;
+	 // private final DiscountType discountType;
+	 // private final int discountValue;
+	 // private final String discountReason;
 
 	  public enum DiscountType {
 	  FLAT, PERCENTAGE;

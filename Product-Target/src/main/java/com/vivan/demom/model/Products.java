@@ -16,6 +16,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
 import java.sql.Timestamp;
@@ -28,12 +29,14 @@ import java.text.SimpleDateFormat;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="PRODUCTS")
+@Setter
 public class Products {
 	  @Id
 	  @GeneratedValue
 	  private long product_id;
 	  private String department;
-	  private long current_price;
+	 // private long current_price;
+	  private double current_price;
 	  private String company;
 	  private String product_title;
 	  private String product_subtitle;

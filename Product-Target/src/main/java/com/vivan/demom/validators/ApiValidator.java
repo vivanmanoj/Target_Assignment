@@ -82,7 +82,7 @@ public class ApiValidator {
 				&& isValidTitle(product.getProduct_title()) 
 				&& isValidIsbn(product.getIsbn())
 				&& isActive(Boolean.toString(product.isActive()))
-				&& isValidPrice(product.getCurrent_price())) {
+				/*&& isValidPrice(product.getCurrent_price())*/) {
 			validateFlag=true;
 		}
 		return validateFlag;

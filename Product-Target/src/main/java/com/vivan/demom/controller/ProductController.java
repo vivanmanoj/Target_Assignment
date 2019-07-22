@@ -108,7 +108,8 @@ public class ProductController {
 		try {
 		 Products prod = productService.getProduct(productId);
 		 if(prod != null){
-			 productService.updateProduct(prod);
+			 products.setProduct_id(productId);
+			 productService.updateProduct(products);
 			 apiResponse.setStatus("000");
 		 	 apiResponse.setMessage("Successfully updated  "+productId);
 		 }else {

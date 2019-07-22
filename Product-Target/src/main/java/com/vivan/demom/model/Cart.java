@@ -16,16 +16,26 @@ import lombok.Setter;
 public class Cart {
 	private final String cart_id;
 	@Setter
-	private long cart_overall_cost;
+	//private long cart_overall_cost;
+	private double cart_overall_cost;
 	private List<String> discounts;
 	private final List<SaleItem> saleItems;
+	
+	/*public static Cart toCart(List<SaleItem> saleItems){
+		   return Cart.builder()
+		        .cart_id(UUID.randomUUID().toString())
+		        .saleItems(saleItems)
+		        .discounts(updateDiscountsApplied(saleItems))
+		        .cart_overall_cost(saleItems.stream().collect(Collectors.summingLong(saleItem -> saleItem.getFinal_selling_price())))
+		        .build();
+		  }*/
 	
 	public static Cart toCart(List<SaleItem> saleItems){
 		   return Cart.builder()
 		        .cart_id(UUID.randomUUID().toString())
 		        .saleItems(saleItems)
 		        .discounts(updateDiscountsApplied(saleItems))
-		        .cart_overall_cost(saleItems.stream().collect(Collectors.summingLong(saleItem -> saleItem.getFinal_selling_price())))
+		        .cart_overall_cost(saleItems.stream().collect(Collectors.summingDouble(saleItem -> saleItem.getFinal_selling_price())))
 		        .build();
 		  }
 
