@@ -8,8 +8,6 @@
 		<version>2.1.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	
-
 	<groupId>com.vivan</groupId>
 	<artifactId>Product-Target</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -48,6 +46,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+               <groupId>org.projectlombok</groupId>
+               <artifactId>lombok</artifactId>
+               <version>1.18.8</version>
+        </dependency>
 	</dependencies>
 
 	<build>

@@ -1,0 +1,24 @@
+2019-07-22 18:47:28,158 INFO com.vivan.demom.ProductTargetApplication [main] Starting ProductTargetApplication on MDLPTP184 with PID 65464 (D:\Training\Maven-Proj\Product-Target\target\classes started by a8422 in D:\Training\Maven-Proj\Product-Target)
+2019-07-22 18:47:28,163 DEBUG com.vivan.demom.ProductTargetApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-22 18:47:28,164 INFO com.vivan.demom.ProductTargetApplication [main] No active profile set, falling back to default profiles: default
+2019-07-22 18:47:30,071 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2019-07-22 18:47:30,072 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-22 18:47:30,211 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2019-07-22 18:47:30,448 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-07-22 18:47:30,561 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-07-22 18:47:30,669 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-22 18:47:30,893 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-22 18:47:30,895 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-07-22 18:47:31,063 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-22 18:47:31,216 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-22 18:47:31,599 INFO org.hibernate.tuple.PojoInstantiator [main] HHH000182: No default (no-argument) constructor for class: com.vivan.demom.model.Discounts (class must be instantiated by Interceptor)
+2019-07-22 18:47:31,988 INFO org.hibernate.tool.schema.internal.SchemaCreatorImpl [main] HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1b57c345'
+2019-07-22 18:47:32,357 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2019-07-22 18:47:33,052 INFO com.vivan.demom.ProductTargetApplication [main] Started ProductTargetApplication in 5.452 seconds (JVM running for 6.33)
+2019-07-22 18:49:22,688 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-22 18:49:23,352 DEBUG com.vivan.demom.controller.ProductController [http-nio-8080-exec-1] Entering inside the saveProduct method 
+2019-07-22 18:52:48,355 INFO org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [RMI TCP Connection(2)-127.0.0.1] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-07-22 18:52:48,379 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2019-07-22 18:52:48,383 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown completed.

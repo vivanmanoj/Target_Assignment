@@ -1,0 +1,379 @@
+### Instructions for using jar ###
+
+Step-1: Run jar using following command. [Go to the location where jar exists]
+
+        java -jar Product-Target-0.0.1-SNAPSHOT.jar
+
+
+Step-2 : Use POSTMAN/ REST Client to run Below API's
+
+
+Method : GET
+URL: http://localhost:8080/products
+Response:
+
+[
+    {
+        "product_id": 1,
+        "department": "Home",
+        "current_price": 242.61,
+        "company": "Huels, Hartmann and Koelpin",
+        "product_title": "PORTTITOR",
+        "product_subtitle": "evolve clicks-and-mortar e-services",
+        "product_description": "morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci",
+        "lifecycle_start": "2015-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "848289027-1",
+        "color": "Turquoise",
+        "active": true,
+        "like_products": [
+            "1464",
+            "1564",
+            "1166"
+        ]
+    },
+    {
+        "product_id": 2,
+        "department": "Furniture",
+        "current_price": 400,
+        "company": "Urban Ladder",
+        "product_title": "Sofa Set",
+        "product_subtitle": "Cusion-compass",
+        "product_description": "Extra comfort",
+        "lifecycle_start": "2016-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "848289030-1",
+        "color": "Silver",
+        "active": true,
+        "like_products": [
+            "2464",
+            "3564",
+            "4166"
+        ]
+    }
+]
+**************************************************************************************************************************
+Method : POST
+URL: http://localhost:8080/products
+Request:
+{
+  "department": "Home",
+  "current_price": 242.61,
+  "company": "Huels, Hartmann and Koelpin",
+  "product_title": "PORTTITOR",
+  "product_subtitle": "evolve clicks-and-mortar e-services",
+  "product_description": "morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci",
+  "attributes": "Cloned holistic Graphic Interface",
+  "lifecycle_start": "6/9/2015",
+  "lifecycle_end": "3/14/2029",
+  "isbn": "848289027-1",
+  "color": "Turquoise",
+  "active": "true",
+  "like_products": [ 
+  	1464,
+  	1564,
+  	1166
+  	]
+}
+
+Response:
+{
+    "status": "000",
+    "message": "Successfully created product 1"
+}
+**************************************************************************************************************************
+Method : PUT
+URL: http://localhost:8080/products/2
+Request:
+
+{
+  "department": "Furniture",
+  "current_price": 300,
+  "company": "Urban Ladder",
+  "product_title": "Sofa Set",
+  "product_subtitle": "Cusion-compass",
+  "product_description": "Extra comfort",
+  "attributes": "Cloned holistic Graphic Interface",
+  "lifecycle_start": "6/9/2016",
+  "lifecycle_end": "3/14/2029",
+  "isbn": "99999-1",
+  "color": "Gold",
+  "active": "true",
+  "like_products": [ 
+  	2464,
+  	3564,
+  	4166
+  	]
+}
+
+{
+    "status": "000",
+    "message": "Successfully updated  2"
+}
+
+**************************************************************************************************************************
+Method : DELETE
+URL: http://localhost:8080/products/2
+Request:
+
+{
+  "department": "Furniture",
+  "current_price": 300,
+  "company": "Urban Ladder",
+  "product_title": "Sofa Set",
+  "product_subtitle": "Cusion-compass",
+  "product_description": "Extra comfort",
+  "attributes": "Cloned holistic Graphic Interface",
+  "lifecycle_start": "6/9/2016",
+  "lifecycle_end": "3/14/2029",
+  "isbn": "99999-1",
+  "color": "Gold",
+  "active": "true",
+  "like_products": [ 
+  	2464,
+  	3564,
+  	4166
+  	]
+}
+
+Response:
+{
+    "status": "000",
+    "message": "Successfully Deleted  2"
+}
+**************************************************************************************************************************
+Method: GET[By Department]
+URL:http://localhost:8080/products/Footwear
+Response
+
+[
+    {
+        "product_id": 2,
+        "department": "Footwear",
+        "current_price": 250,
+        "company": "Nike",
+        "product_title": "Sports Shoes",
+        "product_subtitle": "ZigZag",
+        "product_description": "Extra comfort",
+        "lifecycle_start": "2016-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "444412-1",
+        "color": "White",
+        "active": true,
+        "like_products": [
+            "3111",
+            "3112",
+            "3113"
+        ]
+    },
+    {
+        "product_id": 3,
+        "department": "Footwear",
+        "current_price": 300,
+        "company": "Addidas",
+        "product_title": "Sports Shoes",
+        "product_subtitle": "Cluster",
+        "product_description": "Extra comfort",
+        "lifecycle_start": "2016-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "444413-1",
+        "color": "Green",
+        "active": true,
+        "like_products": [
+            "3111",
+            "3112",
+            "3113"
+        ]
+    },
+    {
+        "product_id": 4,
+        "department": "Footwear",
+        "current_price": 350,
+        "company": "Reebok",
+        "product_title": "Sports Shoes",
+        "product_subtitle": "Superstar",
+        "product_description": "Extra comfort",
+        "lifecycle_start": "2016-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "444414-1",
+        "color": "Yellow",
+        "active": true,
+        "like_products": [
+            "3111",
+            "3112",
+            "3113"
+        ]
+    }
+]
+***************************************************************************************************************************
+Method: GET[By company]
+URL:http://localhost:8080/product/Reebok
+Response
+
+[
+    {
+        "product_id": 4,
+        "department": "Footwear",
+        "current_price": 350,
+        "company": "Reebok",
+        "product_title": "Sports Shoes",
+        "product_subtitle": "Superstar",
+        "product_description": "Extra comfort",
+        "lifecycle_start": "2016-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "444414-1",
+        "color": "Yellow",
+        "active": true,
+        "like_products": [
+            "3111",
+            "3112",
+            "3113"
+        ]
+    },
+    {
+        "product_id": 5,
+        "department": "Footwear",
+        "current_price": 700,
+        "company": "Reebok",
+        "product_title": "Formal",
+        "product_subtitle": "Office Wears",
+        "product_description": "Tiktop",
+        "lifecycle_start": "2016-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "444417-1",
+        "color": "Black",
+        "active": true,
+        "like_products": [
+            "3666",
+            "3666",
+            "3668"
+        ]
+    }
+]
+**********************************************************************************************************************
+Method: GET[By Product_title]
+http://localhost:8080/product/cmp/Sports Shoes
+Response
+[
+    {
+        "product_id": 2,
+        "department": "Footwear",
+        "current_price": 250,
+        "company": "Nike",
+        "product_title": "Sports Shoes",
+        "product_subtitle": "ZigZag",
+        "product_description": "Extra comfort",
+        "lifecycle_start": "2016-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "444412-1",
+        "color": "White",
+        "active": true,
+        "like_products": [
+            "3111",
+            "3112",
+            "3113"
+        ]
+    },
+    {
+        "product_id": 3,
+        "department": "Footwear",
+        "current_price": 300,
+        "company": "Addidas",
+        "product_title": "Sports Shoes",
+        "product_subtitle": "Cluster",
+        "product_description": "Extra comfort",
+        "lifecycle_start": "2016-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "444413-1",
+        "color": "Green",
+        "active": true,
+        "like_products": [
+            "3111",
+            "3112",
+            "3113"
+        ]
+    },
+    {
+        "product_id": 4,
+        "department": "Footwear",
+        "current_price": 350,
+        "company": "Reebok",
+        "product_title": "Sports Shoes",
+        "product_subtitle": "Superstar",
+        "product_description": "Extra comfort",
+        "lifecycle_start": "2016-06-08T18:30:00.000+0000",
+        "lifecycle_end": "2029-03-13T18:30:00.000+0000",
+        "isbn": "444414-1",
+        "color": "Yellow",
+        "active": true,
+        "like_products": [
+            "3111",
+            "3112",
+            "3113"
+        ]
+    }
+]
+************************************************************************************************************************
+Discount:
+Method:POST
+URL:http://localhost:8080/cart
+
+Request:
+{
+	"cart_id":123,
+	"orderedProducts":[{
+	"product_id": 1,
+	"quantity":3
+	},{
+	"product_id": 2,
+	"quantity":12
+	},{
+	"product_id": 3,
+	"quantity":5
+	}
+	
+	]
+}
+
+
+Response:
+
+{
+    "cart_id": "df3465d5-58c7-49cd-944b-889f9a89375d",
+    "cart_overall_cost": 5935,
+    "discounts": [
+        "Ten Plus Quantity Of Single Item Discount Applied",
+        "Five_Items_Same_Department_Reduce_overall_cost_10_percent",
+        "Total_Cost_Greater_Than_50"
+    ],
+    "saleItems": [
+        {
+            "product_id": 1,
+            "department": "Furniture",
+            "quantity": 3,
+            "base_price": 800,
+            "price_with_quantity_multiplied": 2400,
+            "final_selling_price": 2400,
+            "discountApplied": null
+        },
+        {
+            "product_id": 2,
+            "department": "Footwear",
+            "quantity": 12,
+            "base_price": 225,
+            "price_with_quantity_multiplied": 2700,
+            "final_selling_price": 2700,
+            "discountApplied": "Ten Plus Quantity Of Single Item Discount Applied"
+        },
+        {
+            "product_id": 3,
+            "department": "Footwear",
+            "quantity": 5,
+            "base_price": 300,
+            "price_with_quantity_multiplied": 1500,
+            "final_selling_price": 1500,
+            "discountApplied": null
+        }
+    ]
+}
+
